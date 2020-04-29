@@ -40,6 +40,25 @@
 		margin-bottom: 60px;
 		margin-top: 60px;
 	}
+
+	/*.branches: {
+    	background-image: url('http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/943468aa-banner-all-m_0hs0yu00000000000001o.jpg');
+	}*/
+
+	.video-testimonials{
+		background: pink;
+		margin-top: 30px;
+		height: 720px
+	}
+
+	.youtube-videos {
+		display: flex; 
+		justify-content: space-between;
+		flex-direction: column;
+		max-width: 300px;
+	    margin-left: auto;
+	    margin-right: auto
+	}
 }
 
 .header-image img{
@@ -109,6 +128,7 @@
 .about-instrcutions {
 	max-width: 500px;
 	margin: auto;
+	display: flex;
 }
 .about-instrcution .ins {
 	padding: 20px;
@@ -203,3 +223,16 @@ a {
 	margin-top: 60px;
 }
 
+.video-testimonials{
+	background: pink;
+	margin-top: 30px;
+	height: 350px
+}
+
+.youtube-videos {
+	display: flex; 
+	justify-content: space-between;
+    width: 930px;
+    margin-left: auto;
+    margin-right: auto
+}
