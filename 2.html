@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Consulation</title>
+
+    <style>
+        body {
+        margin: 0px;
+        padding: 0px;
+        }
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+            grid-column: auto;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+        }
+        .header-image img{
+            /* width: 100%; */
+            height: 400px;
+        }
+        .header-descritption{
+            margin:  auto;
+            display: inline-grid;
+            max-width: 350px;
+            padding: 20px;
+        }
+        .header-descritption .title{
+            text-align: center;
+
+        }
+        .header-descritption .title strong{
+            font-size: 30px;
+        }
+        .header-descritption .info{
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .about {
+            background: #fbedff;
+            padding: 20px;
+        }
+        .about .title {
+            margin-top: 20px;
+            font-family: inherit;
+            font-weight: normal;
+            color:rgb(146, 72, 145);
+            font-size: 30px;
+            text-align: center;
+        }
+        .about p{
+            font-family: inherit;
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: -webkit-center;
+        }
+        .circle {
+            margin: auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            border: 1px solid grey;
+            background: white;
+        }
+        .circle img {
+            margin-top: 30px;
+            margin-left: 30px;
+            width: 60px;
+            height: 50px;
+        }
+        .about-instrcutions {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+        }
+        .about-instrcution .ins {
+            padding: 20px;
+        }
+        .about-instrcution .ins strong {
+            font-size: 25px;
+            text-align: -webkit-center
+        }
+        .about-instrcution .ins span {
+            font-size: 20px;
+        }
+        .about .suggetion {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: -webkit-center
+        }
+        .call-now-button {
+            max-width: 300px;
+            background: rgba(234,59,149,1);
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;;
+            font-weight: bold;
+            border: 0px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .call-now-button:hover {
+            background: purple;
+        }
+        a {
+            text-decoration: none;
+        }
+        .advantages {
+            padding: 20px;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            max-width: 1000px;
+            justify-content: space-between;
+        }
+        .advantages .title {
+            font-size: 30px;
+            font-weight: bold;
+            color:rgb(146, 72, 145);
+        }
+        .advantages img {
+            width: 380px;
+            height: 300px;
+            margin-right: 50px;
+        }
+        .advantages .text{
+            margin-top: 50px;
+        }
+        .advantages li {
+            font-size: 20px;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+        .advantages .img-section {
+            margin-bottom: 20px;
+        }
+        .why-cloud-nine {
+            background: #fbedff;
+            padding: 20px;
+        }
+        .why-cloud-nine .title {
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;;
+            color:rgb(146, 72, 145);
+        }
+        .why-cloud-nine .img-section {
+            /* max-width: 200px; */
+            text-align: -webkit-center;
+            margin: 2em;
+            font-size: 20px;
+        }
+        .why-cloud-nine .row{
+            display: flex;
+            /* width: 1200px; */
+            margin: auto;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            margin-top: 60px;
+        }
+        .video-testimonials{
+            background: pink;
+            margin-top: 30px;
+            padding-bottom: 50px
+        }
+        .youtube-videos {
+            display: flex; 
+            justify-content: space-between;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto
+        }
+        .video {
+            /* min-height: 200px; */
+            /* width: 500px; */
+            margin: 1em
+        }
+        .faqs {
+            width: 100%;
+            background: #e8e8e8
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .faqs-container {
+            display: flex;
+            max-width: 1000px;
+            justify-content: space-between;
+            margin: auto;
+            padding: 20px;
+        }
+        .question strong {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: grey;
+        }
+        .faqs .title {
+            text-align: center;
+        }
+        .faqs .title {
+            font-size: 30px;
+            text-align: -webkit-center
+            margin-bottom:30px;
+            margin-top:30px;
+        }
+        .question {
+            max-width: 400px;
+        }
+        .download {
+            display: flex;
+            margin: auto;
+            max-width: 1000px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            justify-content: space-between;
+
+        }
+        .download div {
+            max-width: 70%;
+        }
+        .download-button {
+            display: none;
+        }
+        .footer {
+            padding-top: 30px;
+            padding-bottom: 50px;
+            background-color: #424242;
+        }
+        .footer .locations  strong{
+            color: white;
+            font-weight: normal;
+            opacity: 0.7;
+        }
+        .footer .logo {
+            max-width: 200px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        .footer .footer-container {
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+        .awards {
+            padding: 50px;
+        }
+        .awards-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .awards-container h1 {
+            text-align: center;
+        }
+        .awards-info {
+            text-align: center;
+            font-size: 20px;
+        }
+        .awards-container .gallery {
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .awards-container .gallery .img-section{
+            max-width: 200px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .book-now-button {
+            background: rgba(234,59,149,1);
+            width: 300px;
+            height: 50px;
+            margin: auto;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            border-radius: 20px;
+            text-align:center;
+            padding-top: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .book-now-button:hover {
+            background: purple;
+        }
+        .branches {
+            background-image: url("https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/c19ef83c-image-all_0yk0a700000000000001o.jpg"); 
+            height: 500px;
+            width: 1000px;
+            margin: auto;
+            background-repeat-x: no-repeat;
+            background-size: 100% 100%;
+        }
+        @media only screen and (max-width: 600px) {
+            .header {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .header-descritption .info{
+                font-size: 20px;
+            }
+
+            .advantages {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .about {
+                padding: 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .why-cloud-nine .row{
+                display: flex;
+                flex-direction: column;
+                max-width: 350px;
+                margin: auto;
+                justify-content: space-between;
+                margin-bottom: 60px;
+                margin-top: 60px;
+            }
+
+            .question strong {
+                font-size: 10px;
+            }
+
+
+            .faqs-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .about-instrcutions {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .about p {
+                font-size: 20px;
+            }
+
+            .about-instrcution .ins {
+                padding: 20px;
+                text-align: -webkit-center;
+                font-size: 24px;
+            }
+
+            .about-instrcution .ins strong {
+                font-size: 20px;
+            }
+
+            .branches: {
+                background-image: url('http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/943468aa-banner-all-m_0hs0yu00000000000001o.jpg');
+            }
+
+
+            .branches {
+                background-image: url("http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/943468aa-banner-all-m_08w0hf00000000000001o.jpg"); 
+                height: 800px;
+                width: 80%;
+                background-repeat-x: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .download {
+                display: none;
+            }
+
+            .download-button {
+                padding-top: 15px;
+                font-family: Roboto;
+                display: block;
+                border-radius: 10px;
+                width: 270px;
+                height: 40px;
+                background: rgba(234,59,149,1);
+                color: #ffffff;
+                font-size: 22px;
+                line-height: 26px;
+                font-weight: 400;
+                font-family: Roboto;
+                text-align: center;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .download-button a {
+                color: white;
+            }
+
+            .awards-container .gallery {
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .video-testimonials{
+                background: pink;
+                margin-top: 30px;
+            }
+
+            .youtube-videos {
+                display: flex; 
+                justify-content: space-between;
+                flex-direction: column;
+                /* max-width: 100%; */
+                margin-left: auto;
+                margin-right: auto
+            }
+
+            .video {
+                /* min-height: 200px; */
+                /* max-width: 90%; */
+                margin: auto;
+                margin-bottom: 2em;
+            }
+
+            .question strong  {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"> 
+           <div class="header-image">
+                <img src="https://s3.amazonaws.com/static.cloudninecare.email/marketing/vcimage1.jpg" >
+            </div>
+
+           <div class="header-descritption">
+                <div class="title" style="color: rgb(146, 72, 145);">
+                    <strong>Video Consultations by India’s best obstetrician and gynecologist on Cloudnine</strong>
+                 </div>
+                 <div class="info">
+                    <!-- <span>Missed call now at</span>
+                    <a href="tel:08046238915"><strong class="phone_no">08046238915</strong></a> -->
+                    <!-- <span style="background-color: rgba(255, 255, 255, 0);">
+                        to download the app and book a video consultation!
+                    </span> -->
+                </div>
+            </div>
+        </div>  
+        <div style="background: lavenderblush; text-align: center;margin:1.0em;border-radius:1em">
+            <iframe width="90%" height="500" src="https://bookdocappointment.cloudninecare.com/?city=Pune&procedure=Video+Consultation" frameborder="0" ></iframe>
+
+        </div>
+
+        <div class="about">
+            <div class="title"><strong >About Video Consultation Services</strong></div>
+            <p class="about-para-1">
+                <span>
+                    Cloudnine is offering obstetrics and gynaecology consultations via the "
+                    <a data-action="url" data-params="false" href="clkn/http/onelink.to/sh5wnb" target="_blank">
+                        <span style="font-size: 22px;">
+                            <span style="color: rgb(234, 59, 149);">
+                                <span style="background-color: rgba(255, 255, 255, 0);">
+                                    <strong>It’s our baby app"</strong>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                <span>
+            </p>
+            <p class="about-para-2">
+                Given the current health crisis, we understand that every Doctor consultation is crucial. Cloudnine takes the virtual route to offer care at a distance. Leading doctors and experts are now available for video consulting on Cloudnine's 'Its Our Baby App'. You can now book your appointment with your preferred Obstetricians and Gynaecologists from the comfort of your home.
+                <br><br>This way our specialists can provide you with the topmost medical assistance with an online doctor consultation via Cloudnine’s virtual consultation app. 
+                <br><br>Along with video consultations, we’ve got some additional services for you:
+            </p>
+
+            <div class="about-instrcutions">
+                <div class="about-instrcution">
+                    <div class="circle">
+                       <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/90bc7fe4-car_01k01300000000000001o.jpg">
+                    </div>
+                    <div class="ins">    
+                        <span>
+                            <strong>Pick-up & drop for crucial consultations, scans & emergencies</strong>
+                            <span> (Within 5 Kms of the radius from the centre)</span>
+                        </span>
+                    </div>
+                </div>
+
+                 <div class="about-instrcution">
+                    <div class="circle">
+                       <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/5b813eee-bag_01j01s00000000000001o.jpg">
+                    </div>
+                    <div class="ins">    
+                            <strong>Doorstep delivery of medicines</strong>
+                    </div>
+                </div>
+
+                 <div class="about-instrcution">
+                    <div class="circle">
+                       <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/4294f313-home_01z01m00000000000001o.jpg">
+                    </div>
+                    <div class="ins">    
+                            <strong>Home sample collection for lab test</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggetion"> You can’t come to us so Cloudnine is coming to you. Please feel free to consult the doctor of your choice via Cloudnine ’s app. </div>
+
+            <!-- <a href="www.google.com"><div class="call-now-button">Missed Call Now to download the app</div></a> -->
+        </div>
+
+        <div class="advantages">
+            <div class="img-section">
+                <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/dd2549ba-video-con_08v07000000000000001o.jpg">
+            </div>
+            <div>
+                <div style="text-align: center;">
+                    <strong class="title">
+                        Advantages of video consultation:
+                    </strong>
+                </div>
+                <div  class="text">
+                    <li>Easy and convenient option to avoid contracting any infection.</li>
+                    <li>Reduced stress in the current situation </li>
+                    <li>Improved connect with the doctor with the help of technology. </li>
+                </div>
+            </div>
+        </div>
+        
+        <div class="advantages">
+            <div>
+                <div style="text-align: center;">
+                    <strong class="title">
+                        How does it work?
+                    </strong>
+                </div>
+                 <p style="font-size: 22px; text-align: center;">Video consultation on Cloudnine for telemedicine is quite simple.</p>
+                <div  class="text" style="font-weight: bold;">
+                   <li> 
+                        <span>Download Cloudnine’s, “it’s our baby app” for video consultations</span> 
+                    </li>
+                    <li>
+                        <span>Select the option for your city, center, and choose your preferred gynecologist</span> 
+                    </li>
+                    <li>
+                        <span>Select a time slot as per doctor's availability</span> 
+                    </li>
+                    <li>
+                    <span>Book a Video/Teleconsultation. </span> </li>
+                </div>
+            </div>
+
+
+            <div class="video">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/OEWLVRFzVuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>            
+        </div>  
+
+        <div class="why-cloud-nine">
+            <div class="title"><strong>Why Clouldnine?</strong></div>
+            <div class="row" >
+                <div class="img-section">
+                    <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/484fb006-app_01y01y000000000000001.png">
+                    <br/>
+                    <span>Instant Chat with Doctors via Cloudnine ’s app</span>
+                </div>
+
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/672a7f26-02-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>5 Lakh+ Happy Customers</span>
+                </div>
+
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/f3d42a36-03-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>7 Cities</span>
+                </div>
+
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/c1ce1261-04icon_01y01y000000000000001.png" height="60px">
+                    <br/>
+                    <span>16+ Centers across India</span>
+                </div>
+
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/d776389d-06-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>NABH Certified*</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/a49a949b-07-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>Trusted Experts with 35+ years of Experience</span>
+                </div>
+
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/239f2bab-01-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>80K+ Deliveries</span>
+                </div>
+
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/c2f2738f-05-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>Level III NICU</span>
+                </div>
+                <div class="img-section">
+                    <img src="https://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/3486a9f9-08-icon_01y01y000000000000001.png">
+                    <br/>
+                    <span>#1 Women’s care hospital chain in India</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <p style="line-height: 29px; text-align: center;">
+                    <span style="color: rgb(59, 59, 59);">
+                        <strong><span style="font-size: 28px;">Cloudnine Gallery</span></strong>
+                    </span>
+                </p>
+            </div>
+            <div class="branches">
+            </div>
+        </div>
+        
+        <div class="video-testimonials">
+            <div style="padding: 20px";>
+               <p style="line-height: 45px; text-align: center;">
+                    <span style="font-size: 36px;">
+                        <span style="color: rgb(59, 59, 59);">Cloudnine Video Testimonials</span>
+                    </span>
+                </p>
+            </div>
+            <div class="youtube-videos">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/ZNg3NWfVHF0?wmode=opaque" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/ELelxOiTlVo?wmode=opaque" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/f2PEXrOelOE?wmode=opaque" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="awards">
+            <div class="awards-container">
+                <h1 class="title">Awards</h1>
+                <p class="awards-info"><strong>Cloudnine Group of hospitals are India’s leading chain of maternity & fertility hospitals with numerous accolades</strong></p>
+                <div class="gallery">
+                    <div class="img-section">
+                        <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/234fed25-cloudnine-mumbai-pune-india-today-healthcare-excellence-awards-2018_00000003703700m00001o.jpg">
+                        <br/>
+                        <span>Excellence In Mother & Childcare -2018, Cloudnine Hospital – Mumbai & Pune</span>
+                    </div>
+
+                    <div class="img-section">
+                        <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/39699c30-times-archievers-mumbai-2018_00000003703700m000001.png">
+                        <br/>
+                        <span>Best Birthing Centre 2018 Cloudnine Hospital, Malad</span>
+                    </div>
+
+                    <div class="img-section">
+                        <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/d4459ee0-toi-2018_00000003703700m00001o.jpg">
+                        <br/>
+                        <span>Ranked #2 Best Single Specialty Hospital In India (2018)</span>
+                    </div>
+
+                    <div class="img-section">
+                        <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/d4459ee0-toi-2018_00000003703700m00001o.jpg">
+                        <br/>
+                        <span>Ranked #1 Best Single Specialty Hospital (2018) In Bengaluru & Chennai (OB-GYN)</span>
+                    </div>
+                    <div class="img-section">
+                        <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/d4459ee0-toi-2018_00000003703700m00001o.jpg">
+                        <br/>
+                        <span>Ranked #1 Best Single Specialty Hospital (2018) In Bengaluru & Chennai (OB-GYN)</span>
+                    </div>
+                </div>
+                <p class="awards-info">Cloudnine Group of hospitals are India’s leading chain of maternity & fertility <br />hospitals with numerous accolades. Cloudnine is always delighted to be at your <br /> service. Our sole purpose is to see you and your family happy!
+
+                </p>
+                <a>
+                    <div class="book-now-button">
+                        <span class="label">Book Now</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="faqs">
+            <div class="title"><strong>FAQs about Doctor Video Consultations in India on Cloudnine</strong> </div>
+            <div class="faqs-container">
+                <div class="col">
+                    <div class="question">
+                        <strong>1. What is Video Consultation on Cloudnine?</strong>
+                        <p>Consultations held by India’s best Obstetricians and Gynecologists on Cloudnine for their patients through live video interaction via the Cloudnine app.
+                        </p>
+                    </div>
+                    <div class="question">
+                        <strong>2. How do I book an appointment for Video Consultations?</strong>
+                        <p>Download app via <a data-action="url" data-params="false" href="http://onelink.to/sh5wnb" target="_blank" style="text-decoration: underline; color: purple; font-weight: bold;">Its Our Baby App</a> on your mobile and book appointments through it.
+                        </p>
+                    </div>
+                    <div class="question">
+                        <strong>3. Will Cloudnine Indiaprovide any additional services during this time period?</strong>
+                         <p>
+                            Yes, exclusive additional services for your benefit is being provided that you can avail through the app, these services include: <br /><br/> ● Home sample collection for lab test <br /><br/> ● Doorstep delivery of medicines <br /> <br/>●
+                            Pick-up and drop for crucial consultations, scans and emergencies (Within 5 Kms of the radius from the centre)
+                        </p>
+                    </div>
+                    <div class="question">
+                        <strong>4. Will My preferred doctor be available for consultation?</strong>
+                        <p>We’ve currently more than 200 doctors on board and more doctors will soon be joining.
+                        </p>
+                    </div>
+                    <div class="question">
+                        <strong>5. Do I get to choose my preferred doctor?</strong>
+                        <p>
+                           Yes, you can choose whichever doctor you want from the available list. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="question">
+                        <strong>6. How should I make a payment?</strong>
+                        <p>Payment can be made through Credit , Debit cards, Paytm, UPI, Phonepe, Amazon pay etc.
+                        </p>
+                    </div>
+
+                    <div class="question">
+                        <strong>7. Is your payment gateway safe and secure?</strong>
+                        <p>Yes, we have ensured to partner with the best and safest service provider in the industry.
+                        </p>
+                    </div>
+                    <div class="question">
+                        <strong>8. What happens if the video call gets disconnected in between?</strong>
+                        <p>You’ll be provided with an option to reconnect in such a case.</p>
+                    </div>
+                    <div class="question">
+                        <strong>9. Can I upload the reports of the prescription for a better understanding?</strong>
+                        <p>
+                            Yes, 30 minutes prior to your appointment the session starts. That is when you can upload the medical reports for the doctor.
+                        </p>
+                    </div>
+                    <div class="question">
+                        <strong>10. Is this facility available day and night?</strong>
+                        <p>Please check the app for the available time slots. Time slots for the doctors may differ as per their availability. </p>
+                    </div>
+                    <div class="question">
+                        <strong>11.What happens if my system shuts down or the internet connection stops working right when the Payment is getting processed?</strong>
+                        <p>If the payment goes through and is done, your appointment will be confirmed.  If not, you’ll have to book again.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="download">
+            <div>
+                <p style="line-height: 45px;">
+                    <span style="font-size: 36px;">
+                        Scan to download “
+                    </span>
+                    </span>
+                    <a data-action="url" data-params="false" href="clkn/http/onelink.to/sh5wnb" target="_blank"> <span style="color: rgb(234, 59, 149);">
+                                <span style="font-size: 36px;">
+                                    <strong>Its Our Baby</strong>
+                                </span>
+                        </span>
+                    </a>
+                    <span style="color: rgb(0, 0, 0);">
+                            <span style="font-size: 36px;">”
+                                 app &amp; book a Video Consultation Now!
+                             </span>
+                    </span>
+                </p>
+                <p>
+                    <a href="https/play.google.com/store/apps/details?id=com.cloudnine&amp;hl=en_IN" data-action="url" data-params="false" target="_self"></a>
+                </p>
+            </div>
+            <div class="scanner">
+                <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/e5df6788-qr-code_06106100000000000001o.jpg" />
+            </div>
+        </div>
+
+        <div class="download-button">
+            <a class="lp-element lp-pom-button" id="lp-pom-button-1445" href="http/onelink.to/sh5wnb" target="_blank">
+                <span class="label">Download App</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <div class="footer-container">
+                <div class="logo">
+                <img src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/obstetrics-gynaecology-video-consultations/3f146939-logo-1-w_02801r000000000000001.png">
+            </div>
+
+            <div class="locations">
+                <strong>Bengaluru | Chennai | Gurugram | Mumbai | Navi Mumbai | Pune | Chandigarh | Noida</strong>
+            </div>
+
+            <p style="text-align: center;">
+                <span style="color: rgb(154, 154, 154);">Copyright © cloudninecare.com, All rights reserved</span>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
