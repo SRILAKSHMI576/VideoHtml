@@ -1,0 +1,205 @@
+
+.container {
+	    max-width: 100%;
+	    overflow-x: hidden;
+	    grid-column: auto;
+		font-family: Arial, sans-serif;
+
+}
+.header {
+	display: flex;
+}
+
+
+@media only screen and (max-width: 600px) {
+	 .header {
+		display: flex;
+   		flex-direction: column-reverse;
+	}
+
+	.advantages {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	.about {
+		padding: 20px;
+		max-width: 350px;
+		margin: auto;
+
+	}
+
+
+	.why-cloud-nine .row{
+		display: flex;
+		flex-direction: column;
+		max-width: 150px;
+		margin: auto;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		margin-top: 60px;
+	}
+}
+
+.header-image img{
+    width: 1000px;
+    height: 532px;
+}
+
+.header-descritption{
+	margin:  auto;
+	display: inline-grid;
+	max-width: 350px;
+	padding: 20px;
+}
+
+.header-descritption .title{
+	text-align: center;
+
+}
+.header-descritption .title strong{
+	font-size: 30px;
+}
+
+.header-descritption .info{
+	font-family: Arial, sans-serif;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.about {
+	background: #fbedff;
+	padding: 20px;
+}
+
+.about .title {
+	margin-top: 20px;
+	font-family: inherit;
+	font-weight: normal;
+	color:rgb(146, 72, 145);
+	font-size: 30px;
+	text-align: center;
+}
+.about p{
+	font-family: inherit;
+	margin-top: 20px;
+	font-size: 24px;
+	text-align: -webkit-center;
+}
+
+.circle {
+	margin: auto;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	border: 1px solid grey;
+	background: white;
+
+}
+
+.circle img {
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 60px;
+	height: 50px;
+}
+
+.about-instrcutions {
+	max-width: 500px;
+	margin: auto;
+}
+.about-instrcution .ins {
+	padding: 20px;
+	text-align: -webkit-center
+}
+.about-instrcution .ins strong {
+	font-size: 25px;
+	text-align: -webkit-center
+}
+
+.about-instrcution .ins span {
+	font-size: 20px;
+}
+
+.about .suggetion {
+	margin-top: 20px;
+	font-size: 20px;
+	text-align: -webkit-center
+}
+
+.call-now-button {
+	max-width: 300px;
+	background: rgba(234,59,149,1);
+	font-size: 24px;
+	padding: 20px;
+	border-radius: 20px;
+	color: white;
+	font-family: Arial, sans-serif;
+	text-align: center;;
+	font-weight: bold;
+	border: 0px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+.advantages {
+	padding: 20px;
+	margin: auto;
+	margin-top: 40px;
+	display: flex;
+	max-width: 1000px;
+	justify-content: space-between;
+}
+
+.advantages .title {
+	font-size: 30px;
+	font-weight: bold;
+	color:rgb(146, 72, 145);
+}
+
+.advantages img {
+	width: 380px;
+	height: 300px;
+	margin-right: 50px;
+}
+
+.advantages span {
+	font-size: 24px;
+}
+
+.advantages .img-section {
+	margin-bottom: 20px;
+}
+
+.why-cloud-nine {
+	background: #fbedff;
+	padding: 20px;
+}
+
+.why-cloud-nine .title {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;;
+	color:rgb(146, 72, 145);
+}
+.why-cloud-nine .img-section {
+	max-width: 200px;
+	text-align: -webkit-center;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.why-cloud-nine .row{
+	display: flex;
+	width: 1200px;
+	margin: auto;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	margin-top: 60px;
+}
+
