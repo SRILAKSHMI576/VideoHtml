@@ -22,15 +22,12 @@
 		flex-direction: column;
 	}
 
-
 	.about {
 		padding: 20px;
 		max-width: 350px;
 		margin: auto;
 
 	}
-
-
 	.why-cloud-nine .row{
 		display: flex;
 		flex-direction: column;
@@ -173,6 +170,11 @@
 	margin-top: 20px;
 }
 
+
+.call-now-button:hover {
+	background: purple;
+}
+
 a {
 	text-decoration: none;
 }
@@ -302,7 +304,7 @@ a {
 }
 
 .footer {
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-bottom: 50px;
 	background: black;
 }
@@ -355,7 +357,7 @@ a {
 }
 
 .book-now-button {
-	background: red;
+	background: rgba(234,59,149,1);
 	width: 300px;
 	height: 50px;
 	margin: auto;
@@ -367,6 +369,10 @@ a {
 	padding-top: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.book-now-button:hover {
+	background: purple;
 }
 @media only screen and (max-width: 600px) {
 	
